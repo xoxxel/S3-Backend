@@ -64,7 +64,18 @@ python s3cli.py head <key>
 python s3cli.py list [--prefix PREFIX]
 ```
 - List all files or filter by prefix
-- Example: `python s3cli.py list --prefix images/`
+- Examples: 
+  ```bash
+  # List all files
+  python s3cli.py list
+
+  # List files in specific folder
+  python s3cli.py list --prefix images/
+
+  # List specific file types
+  python s3cli.py list --prefix .jpg    # All JPG files
+  python s3cli.py list --prefix .png    # All PNG files
+  ```
 
 ### Delete Files
 ```bash
@@ -131,4 +142,3 @@ MIT License - feel free to use and modify as needed.
 
 [GitHub Repository](https://github.com/xoxxel/S3-Backend.git)
 python minio_cli.py overwrite assets/logo.webp ./new-logo.webp
-```
